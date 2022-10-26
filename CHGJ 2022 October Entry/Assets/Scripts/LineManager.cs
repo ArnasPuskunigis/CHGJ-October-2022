@@ -18,6 +18,7 @@ public class LineManager : MonoBehaviour
     [SerializeField] GameObject Pattern3img;
 
     [SerializeField] private string CorrectPattern1;
+    [SerializeField] private string CorrectPattern1b;
     [SerializeField] private string CorrectPattern2;
     [SerializeField] private string CorrectPattern2b;
     [SerializeField] private string CorrectPattern3;
@@ -41,6 +42,7 @@ public class LineManager : MonoBehaviour
     void Start()
     {
         CorrectPattern1 = "1231";
+        CorrectPattern1b = "1321";
         CorrectPattern2 = "123541";
         CorrectPattern2b = "145321";
         CorrectPattern3 = "123451";
@@ -73,7 +75,7 @@ public class LineManager : MonoBehaviour
     {
         if (CurrentLevel == 0)
         {
-            if(InputPattern == CorrectPattern1)
+            if(InputPattern == CorrectPattern1 || InputPattern == CorrectPattern1b)
             {
                 Debug.Log("Correct!");
                 //Pattern1img.SetActive(false);
